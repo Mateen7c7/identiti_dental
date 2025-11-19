@@ -1,6 +1,13 @@
 import React from 'react'
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const section = document.getElementById("contact");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -11,8 +18,8 @@ const Hero = () => {
           className="w-full h-full object-cover"
         />
         {/* Gradient Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/70 to-slate-900/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-slate-900/80 via-slate-900/70 to-slate-900/60"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-slate-900/90 via-transparent to-transparent"></div>
       </div>
 
       {/* Content Container */}
@@ -37,8 +44,9 @@ const Hero = () => {
 
           {/* CTA Buttons - Animated with delay */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in-up-delay-3">
-            <a 
-              href="#book-appointment" 
+            <button
+              type="button"
+              onClick={scrollToContact}
               className="group relative px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-out w-full sm:w-auto min-w-[200px]"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
@@ -48,7 +56,7 @@ const Hero = () => {
                 </svg>
               </span>
               <div className="absolute inset-0 bg-blue-500 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
-            </a>
+            </button>
             
             <a 
               href="tel:+1234567890" 
