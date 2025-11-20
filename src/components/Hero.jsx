@@ -8,6 +8,15 @@ const Hero = () => {
     }
   };
 
+  const scrollToNextSection = () => {
+    const heroSection = document.getElementById("hero");
+    const nextSection = heroSection?.nextElementSibling;
+
+    if (nextSection instanceof HTMLElement) {
+      nextSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <section id="hero" className="relative h-[85vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -117,11 +126,16 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <button
+        type="button"
+        onClick={scrollToNextSection}
+        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 animate-bounce p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
+        aria-label="Scroll to next section"
+      >
         <svg className="w-10 h-10 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
-      </div>
+      </button>
     </section>
   )
 }
