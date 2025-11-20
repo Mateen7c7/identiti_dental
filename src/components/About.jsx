@@ -133,8 +133,8 @@ const About = () => {
       ),
       title: '15+ Years',
       description: 'Of Excellence',
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
+      color: '#E7522D',
+      bgColor: 'bg-orange-50',
       isCounter: true,
       counterValue: 15,
       counterSuffix: '+',
@@ -148,8 +148,8 @@ const About = () => {
       ),
       title: 'Board Certified',
       description: 'Dental Professionals',
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
+      color: '#E7522D',
+      bgColor: 'bg-orange-50',
     },
     {
       icon: (
@@ -159,8 +159,8 @@ const About = () => {
       ),
       title: 'State-of-the-Art',
       description: 'Modern Facility',
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
+      color: '#E7522D',
+      bgColor: 'bg-orange-50',
     },
     {
       icon: (
@@ -170,7 +170,7 @@ const About = () => {
       ),
       title: '10,000+',
       description: 'Happy Patients',
-      color: 'text-orange-600',
+      color: '#E7522D',
       bgColor: 'bg-orange-50',
       isCounter: true,
       counterValue: 10000,
@@ -201,10 +201,10 @@ const About = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className={`text-center mb-16 scroll-fade-in ${isVisible ? 'visible' : ''}`}>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 mb-4">
-            About <span className="text-blue-600">Our Clinic</span>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4" style={{ color: '#1D1C1C' }}>
+            About <span style={{ color: '#E7522D' }}>Our Clinic</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 mx-auto rounded-full" style={{ background: 'linear-gradient(to right, #E7522D, #d6451f)' }}></div>
         </div>
 
         {/* Main Content Grid */}
@@ -212,14 +212,14 @@ const About = () => {
           {/* Story Content */}
           <div className={`space-y-6 scroll-fade-in-left ${isVisible ? 'visible' : ''}`}>
             <div className="space-y-4">
-              <h3 className="text-3xl sm:text-4xl font-bold text-slate-900">
+              <h3 className="text-3xl sm:text-4xl font-bold" style={{ color: '#1D1C1C' }}>
                 Your Trusted Dental Care Partner
               </h3>
-              <div className="w-16 h-1 bg-blue-600 rounded-full"></div>
+              <div className="w-16 h-1 rounded-full" style={{ backgroundColor: '#E7522D' }}></div>
             </div>
             
             <p className="text-lg text-slate-700 leading-relaxed">
-              At <span className="font-semibold text-blue-600">Identiti Dental</span>, we've been dedicated to providing exceptional dental care for over 15 years. Our journey began with a simple mission: to create a dental practice where patients feel comfortable, valued, and receive the highest quality of care.
+              At <span className="font-semibold" style={{ color: '#E7522D' }}>Identiti Dental</span>, we've been dedicated to providing exceptional dental care for over 15 years. Our journey began with a simple mission: to create a dental practice where patients feel comfortable, valued, and receive the highest quality of care.
             </p>
             
             <p className="text-lg text-slate-700 leading-relaxed">
@@ -235,7 +235,7 @@ const About = () => {
           <div className={`relative scroll-fade-in-right ${isVisible ? 'visible' : ''}`}>
             <div className="relative group">
               {/* Decorative Border */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl opacity-20 group-hover:opacity-30 blur-xl transition-opacity duration-300"></div>
+              <div className="absolute -inset-4 rounded-2xl opacity-20 group-hover:opacity-30 blur-xl transition-opacity duration-300" style={{ background: 'linear-gradient(to right, #E7522D, #d6451f)' }}></div>
               
               {/* Image Container */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500">
@@ -251,7 +251,7 @@ const About = () => {
               {/* Floating Badge */}
               <div className="absolute -bottom-6 -right-6 bg-white rounded-full p-4 shadow-xl transform group-hover:scale-110 transition-transform duration-300">
                 <div className="flex items-center gap-2">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: 'linear-gradient(to bottom right, #E7522D, #d6451f)' }}>
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
@@ -276,11 +276,11 @@ const About = () => {
               className={`scroll-scale-in ${isVisible ? 'visible' : ''}`}
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              <div className={`${highlight.bgColor} rounded-xl p-6 h-full transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-xl border border-transparent hover:border-${highlight.color.split('-')[1]}-200`}>
-                <div className={`${highlight.color} mb-4`}>
+              <div className={`${highlight.bgColor} rounded-xl p-6 h-full transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-xl border border-transparent hover:border-orange-200`}>
+                <div className="mb-4" style={{ color: highlight.color }}>
                   {highlight.icon}
                 </div>
-                <h4 className="text-2xl font-bold text-slate-900 mb-2">
+                <h4 className="text-2xl font-bold mb-2" style={{ color: '#1D1C1C' }}>
                   {highlight.isCounter ? (
                     <>
                       <Counter
@@ -305,13 +305,13 @@ const About = () => {
         </div>
 
         {/* Certifications Section */}
-        <div className={`bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 shadow-2xl scroll-fade-in ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }}>
+        <div className={`rounded-2xl p-8 md:p-12 shadow-2xl scroll-fade-in ${isVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s', background: 'linear-gradient(to right, #E7522D, #d6451f)' }}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Certifications & Qualifications
               </h3>
-              <p className="text-blue-100 text-lg leading-relaxed">
+              <p className="text-lg leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                 Our team maintains the highest standards of professional excellence through continuous education and certification.
               </p>
             </div>

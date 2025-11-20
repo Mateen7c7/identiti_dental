@@ -153,14 +153,14 @@ const Servicess = () => {
       className="relative isolate overflow-hidden bg-slate-950 py-16 sm:py-20 lg:py-24"
     >
       <div className="absolute inset-0 opacity-60">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.15),transparent_60%)]" />
-        <div className="absolute -top-20 right-10 h-72 w-72 animate-pulse rounded-full bg-sky-500/20 blur-3xl" />
-        <div className="absolute bottom-0 left-10 h-80 w-80 animate-pulse rounded-full bg-indigo-500/20 blur-3xl" />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(231, 82, 45, 0.15), transparent 60%)' }} />
+        <div className="absolute -top-20 right-10 h-72 w-72 animate-pulse rounded-full blur-3xl" style={{ backgroundColor: 'rgba(231, 82, 45, 0.2)' }} />
+        <div className="absolute bottom-0 left-10 h-80 w-80 animate-pulse rounded-full blur-3xl" style={{ backgroundColor: 'rgba(231, 82, 45, 0.2)' }} />
       </div>
 
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-100/80">
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: 'rgba(231, 82, 45, 0.9)' }}>
             Our Services
           </p>
           <h2 className="mt-6 text-3xl font-semibold text-white sm:text-4xl lg:text-5xl">
@@ -185,7 +185,7 @@ const Servicess = () => {
                 visibleCards.includes(index) ? 'visible' : ''
               }`}
             >
-              <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-900/60 text-sky-200 shadow-[0_20px_40px_rgba(8,47,73,0.65)] transition duration-500 group-hover:scale-110">
+              <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-900/60 shadow-[0_20px_40px_rgba(8,47,73,0.65)] transition duration-500 group-hover:scale-110" style={{ color: '#E7522D' }}>
                 <svg
                   className="h-7 w-7"
                   viewBox="0 0 16 16"
@@ -204,7 +204,7 @@ const Servicess = () => {
                 {service.description}
               </p>
 
-              <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-sky-200">
+              <div className="mt-6 flex items-center gap-2 text-sm font-semibold" style={{ color: '#E7522D' }}>
                 <span>Learn more</span>
                 <svg
                   className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"

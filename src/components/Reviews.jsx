@@ -40,12 +40,13 @@ const REVIEWS = [
 ];
 
 const Star = ({ filled }) => (
-  <svg
-    aria-hidden="true"
-    viewBox="0 0 24 24"
-    className={`h-5 w-5 ${filled ? "text-amber-400" : "text-slate-300"}`}
-    fill="currentColor"
-  >
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="h-5 w-5"
+      style={{ color: filled ? '#E7522D' : '#cbd5e1' }}
+      fill="currentColor"
+    >
     <path d="M12 2.75 14.91 9l6.59.52-5.02 4.2 1.58 6.33L12 16.77 5.94 20.05l1.58-6.33L2.5 9.5 9.09 9 12 2.75Z" />
   </svg>
 );
@@ -70,13 +71,13 @@ const Reviews = () => {
 
   return (
     <section className="relative z-10 mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
-      <div className="absolute inset-0 -z-10 mx-auto h-[520px] w-[90%] max-w-5xl rounded-3xl bg-linear-to-r from-sky-100 via-cyan-50 to-white blur-3xl" />
+      <div className="absolute inset-0 -z-10 mx-auto h-[520px] w-[90%] max-w-5xl rounded-3xl blur-3xl" style={{ background: 'linear-gradient(to right, rgba(231, 82, 45, 0.1), rgba(231, 82, 45, 0.05), white)' }} />
       <div className="flex flex-col gap-10 rounded-3xl border border-white/60 bg-white/80 p-8 shadow-xl backdrop-blur">
         <div className="flex flex-col gap-4 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-600">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em]" style={{ color: '#E7522D' }}>
             Loved by Patients
           </p>
-          <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
+          <h2 className="text-3xl font-bold md:text-4xl" style={{ color: '#1D1C1C' }}>
             Testimonials & Patient Stories
           </h2>
           <p className="text-base text-slate-600 md:text-lg">
@@ -99,8 +100,9 @@ const Reviews = () => {
               >
                 <div
                   className={`group flex h-full flex-col gap-6 rounded-2xl border border-slate-100 bg-white p-6 shadow-lg transition duration-500 hover:-translate-y-1 hover:shadow-2xl ${
-                    index === current ? "ring-2 ring-sky-200" : ""
+                    index === current ? "ring-2" : ""
                   }`}
+                  style={index === current ? { ringColor: '#E7522D', ringWidth: '2px' } : {}}
                 >
                   <div className="flex items-center gap-4">
                     <div className="relative h-14 w-14 overflow-hidden rounded-full border border-slate-100">
@@ -112,7 +114,7 @@ const Reviews = () => {
                       />
                     </div>
                     <div>
-                      <p className="text-lg font-semibold text-slate-900">
+                      <p className="text-lg font-semibold" style={{ color: '#1D1C1C' }}>
                         {review.name}
                       </p>
                       <p className="text-sm text-slate-500">{review.title}</p>
@@ -160,9 +162,10 @@ const Reviews = () => {
               onClick={() => goToSlide(index)}
               className={`h-2.5 rounded-full transition-all duration-300 ${
                 current === index
-                  ? "w-10 bg-sky-500"
+                  ? "w-10"
                   : "w-2.5 bg-slate-300 hover:bg-slate-400"
               }`}
+              style={current === index ? { backgroundColor: '#E7522D' } : {}}
             />
           ))}
         </div>

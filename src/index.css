@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Color Variables */
+:root {
+  --primary-color: #E7522D;
+  --secondary-color: #1D1C1C;
+}
+
 /* Custom Animations for Hero Section */
 @keyframes fade-in-up {
   from {

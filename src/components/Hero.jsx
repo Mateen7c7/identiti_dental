@@ -40,11 +40,11 @@ const Hero = () => {
           {/* Clinic Name - Animated */}
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-4 animate-fade-in-up">
             <span className="block">IDENTITI</span>
-            <span className="block text-blue-400">DENTAL</span>
+            <span className="block" style={{ color: '#E7522D' }}>DENTAL</span>
           </h1>
 
           {/* Tagline - Animated with delay */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 font-light mb-6 animate-fade-in-up-delay-1">
+          <p className="text-xl sm:text-2xl md:text-3xl font-light mb-6 animate-fade-in-up-delay-1" style={{ color: 'rgba(231, 82, 45, 0.9)' }}>
             Your Smile, Our Care
           </p>
 
@@ -59,7 +59,10 @@ const Hero = () => {
             <button
               type="button"
               onClick={scrollToContact}
-              className="group relative px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-out w-full sm:w-auto min-w-[200px]"
+              className="group relative px-8 py-4 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-out w-full sm:w-auto min-w-[200px]"
+              style={{ backgroundColor: '#E7522D' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#d6451f'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E7522D'}
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 Book Appointment
@@ -67,7 +70,7 @@ const Hero = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </span>
-              <div className="absolute inset-0 bg-blue-500 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+              <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" style={{ backgroundColor: '#E7522D' }}></div>
             </button>
             
             <a 
@@ -88,7 +91,7 @@ const Hero = () => {
             {/* Opening Hours */}
             <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <div className="flex items-center justify-center gap-3 mb-3">
-                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ color: '#E7522D' }}>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <h3 className="text-lg font-semibold text-white">Opening Hours</h3>
@@ -108,7 +111,7 @@ const Hero = () => {
                 </svg>
                 <h3 className="text-lg font-semibold text-white">Emergency Hotline</h3>
               </div>
-              <a href="tel:+1234567890" className="text-blue-400 hover:text-blue-300 text-lg font-semibold transition-colors duration-300">
+              <a href="tel:+1234567890" className="text-lg font-semibold transition-colors duration-300" style={{ color: '#E7522D' }} onMouseEnter={(e) => e.currentTarget.style.color = '#f56b45'} onMouseLeave={(e) => e.currentTarget.style.color = '#E7522D'}>
                 24/7: (123) 456-7890
               </a>
             </div>

@@ -50,13 +50,13 @@ const Gallery = () => {
       className="relative overflow-hidden bg-slate-950 py-20 text-white"
     >
       <div className="pointer-events-none absolute inset-0 opacity-60">
-        <div className="blur-[140px] duration-1000 animate-pulse absolute -top-32 left-0 h-72 w-72 rounded-full bg-cyan-500/40" />
-        <div className="blur-[160px] duration-1000 animate-pulse absolute bottom-0 right-0 h-96 w-96 rounded-full bg-indigo-500/30 delay-300" />
+        <div className="blur-[140px] duration-1000 animate-pulse absolute -top-32 left-0 h-72 w-72 rounded-full" style={{ backgroundColor: 'rgba(231, 82, 45, 0.4)' }} />
+        <div className="blur-[160px] duration-1000 animate-pulse absolute bottom-0 right-0 h-96 w-96 rounded-full delay-300" style={{ backgroundColor: 'rgba(231, 82, 45, 0.3)' }} />
       </div>
 
       <div className="relative mx-auto flex max-w-6xl flex-col gap-12 px-6">
         <header className="mx-auto max-w-3xl text-center">
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-1 text-xs tracking-[0.3em] uppercase text-cyan-200">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-1 text-xs tracking-[0.3em] uppercase" style={{ color: '#E7522D' }}>
             Spaces & Comfort
           </p>
           <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
@@ -72,8 +72,9 @@ const Gallery = () => {
           {galleryShowcase.map(({ title, description, image, badge, accent }, index) => (
             <article
               key={title}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl shadow-cyan-900/20 backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:border-white/30"
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:border-white/30"
               style={{
+                boxShadow: '0 20px 60px rgba(231, 82, 45, 0.2)',
                 animationDelay: `${index * 100}ms`,
               }}
             >
@@ -89,9 +90,9 @@ const Gallery = () => {
                 />
               </div>
               <div className="relative space-y-4 p-6">
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cyan-100">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide" style={{ color: '#E7522D' }}>
                   {badge}
-                  <span className="h-1 w-1 rounded-full bg-cyan-200" />
+                  <span className="h-1 w-1 rounded-full" style={{ backgroundColor: '#E7522D' }} />
                   Comfort Focused
                 </div>
                 <div>

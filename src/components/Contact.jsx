@@ -43,11 +43,11 @@ const Contact = () => {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-sky-500">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em]" style={{ color: '#E7522D' }}>
             Contact & Location
           </p>
-          <h2 className="mt-4 text-3xl font-semibold text-slate-900 sm:text-4xl">
-            Let’s make your next appointment effortless
+          <h2 className="mt-4 text-3xl font-semibold sm:text-4xl" style={{ color: '#1D1C1C' }}>
+            Let's make your next appointment effortless
           </h2>
           <p className="mt-4 text-base text-slate-600 sm:text-lg">
             Reach out in the way that works best for you—our concierge team
@@ -61,14 +61,14 @@ const Contact = () => {
             className="rounded-3xl border border-white bg-white p-6 shadow-[0_20px_80px_rgba(15,23,42,0.12)] sm:p-8"
           >
             <div className="flex items-center gap-3">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-linear-to-br from-sky-500 to-cyan-400 text-xl font-semibold text-white">
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl text-xl font-semibold text-white" style={{ background: 'linear-gradient(to bottom right, #E7522D, #d6451f)' }}>
                 ✨
               </span>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky-500">
+                <p className="text-sm font-semibold uppercase tracking-[0.35em]" style={{ color: '#E7522D' }}>
                   Contact us
                 </p>
-                <p className="mt-1 text-lg font-semibold text-slate-900">
+                <p className="mt-1 text-lg font-semibold" style={{ color: '#1D1C1C' }}>
                   Tell us about your smile goals
                 </p>
               </div>
@@ -84,7 +84,10 @@ const Contact = () => {
                   name="name"
                   required
                   placeholder="Jane Doe"
-                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none ring-sky-100 transition focus:border-sky-400 focus:bg-white focus:ring-4"
+                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none transition focus:bg-white focus:ring-4"
+                  style={{ '--tw-ring-color': '#E7522D' }}
+                  onFocus={(e) => { e.currentTarget.style.borderColor = '#E7522D'; e.currentTarget.style.boxShadow = '0 0 0 4px rgba(231, 82, 45, 0.1)'; }}
+                  onBlur={(e) => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.boxShadow = 'none'; }}
                 />
               </div>
               <div className="space-y-2">
@@ -96,7 +99,10 @@ const Contact = () => {
                   name="email"
                   required
                   placeholder="you@email.com"
-                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none ring-sky-100 transition focus:border-sky-400 focus:bg-white focus:ring-4"
+                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none transition focus:bg-white focus:ring-4"
+                  style={{ '--tw-ring-color': '#E7522D' }}
+                  onFocus={(e) => { e.currentTarget.style.borderColor = '#E7522D'; e.currentTarget.style.boxShadow = '0 0 0 4px rgba(231, 82, 45, 0.1)'; }}
+                  onBlur={(e) => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.boxShadow = 'none'; }}
                 />
               </div>
               <div className="space-y-2">
@@ -108,7 +114,10 @@ const Contact = () => {
                   name="phone"
                   required
                   placeholder="(619) 555-0143"
-                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none ring-sky-100 transition focus:border-sky-400 focus:bg-white focus:ring-4"
+                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none transition focus:bg-white focus:ring-4"
+                  style={{ '--tw-ring-color': '#E7522D' }}
+                  onFocus={(e) => { e.currentTarget.style.borderColor = '#E7522D'; e.currentTarget.style.boxShadow = '0 0 0 4px rgba(231, 82, 45, 0.1)'; }}
+                  onBlur={(e) => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.boxShadow = 'none'; }}
                 />
               </div>
               <div className="space-y-2">
@@ -118,7 +127,10 @@ const Contact = () => {
                 <input
                   type="date"
                   name="date"
-                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none ring-sky-100 transition focus:border-sky-400 focus:bg-white focus:ring-4"
+                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none transition focus:bg-white focus:ring-4"
+                  style={{ '--tw-ring-color': '#E7522D' }}
+                  onFocus={(e) => { e.currentTarget.style.borderColor = '#E7522D'; e.currentTarget.style.boxShadow = '0 0 0 4px rgba(231, 82, 45, 0.1)'; }}
+                  onBlur={(e) => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.boxShadow = 'none'; }}
                 />
               </div>
             </div>
@@ -131,14 +143,17 @@ const Contact = () => {
                 name="message"
                 rows="4"
                 placeholder="Let us know what you need help with..."
-                className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none ring-sky-100 transition focus:border-sky-400 focus:bg-white focus:ring-4"
+                  className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none transition focus:bg-white focus:ring-4"
+                  onFocus={(e) => { e.currentTarget.style.borderColor = '#E7522D'; e.currentTarget.style.boxShadow = '0 0 0 4px rgba(231, 82, 45, 0.1)'; }}
+                  onBlur={(e) => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.boxShadow = 'none'; }}
               />
             </div>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <button
                 type="submit"
-                className="inline-flex items-center justify-center rounded-2xl bg-linear-to-r from-sky-500 to-cyan-400 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-sky-500/30 transition hover:translate-y-0.5 hover:brightness-110"
+                className="inline-flex items-center justify-center rounded-2xl px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:translate-y-0.5 hover:brightness-110"
+                style={{ background: 'linear-gradient(to right, #E7522D, #d6451f)', boxShadow: '0 10px 30px rgba(231, 82, 45, 0.3)' }}
               >
                 Request appointment
               </button>
@@ -161,12 +176,15 @@ const Contact = () => {
                         href={item.action}
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-2 inline-flex text-lg font-medium text-slate-900 transition hover:text-sky-500"
+                        className="mt-2 inline-flex text-lg font-medium text-slate-900 transition"
+                        style={{ color: '#1D1C1C' }}
+                        onMouseEnter={(e) => e.currentTarget.style.color = '#E7522D'}
+                        onMouseLeave={(e) => e.currentTarget.style.color = '#1D1C1C'}
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <p className="mt-2 text-lg font-medium text-slate-900">
+                      <p className="mt-2 text-lg font-medium" style={{ color: '#1D1C1C' }}>
                         {item.value}
                       </p>
                     )}
@@ -185,7 +203,10 @@ const Contact = () => {
                       href={social.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-base font-semibold text-slate-800 transition hover:text-sky-500"
+                      className="text-base font-semibold transition"
+                      style={{ color: '#1D1C1C' }}
+                      onMouseEnter={(e) => e.currentTarget.style.color = '#E7522D'}
+                      onMouseLeave={(e) => e.currentTarget.style.color = '#1D1C1C'}
                     >
                       {social.label}
                     </a>

@@ -86,13 +86,13 @@ const TransformationCard = ({ data, index }) => {
   return (
     <article
       ref={ref}
-      className={`grid gap-8 rounded-3xl border border-white/10 bg-white/5 p-6 text-white shadow-2xl shadow-cyan-500/10 backdrop-blur lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:p-10 ${
+      className={`grid gap-8 rounded-3xl border border-white/10 bg-white/5 p-6 text-white shadow-2xl backdrop-blur lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:p-10 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       } transition-all duration-700`}
-      style={{ transitionDelay: `${index * 80}ms` }}
+      style={{ transitionDelay: `${index * 80}ms`, boxShadow: '0 20px 60px rgba(231, 82, 45, 0.1)' }}
     >
       <div className="space-y-6">
-        <span className="inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1 text-sm font-semibold tracking-wide text-cyan-200">
+        <span className="inline-flex items-center rounded-full border px-4 py-1 text-sm font-semibold tracking-wide" style={{ borderColor: 'rgba(231, 82, 45, 0.3)', backgroundColor: 'rgba(231, 82, 45, 0.1)', color: '#E7522D' }}>
           {data.badge}
         </span>
         <div>
@@ -159,7 +159,8 @@ const TransformationCard = ({ data, index }) => {
             value={position}
             onChange={(event) => setPosition(Number(event.target.value))}
             aria-label={`Drag to compare before and after for ${data.title}`}
-            className="absolute bottom-4 left-1/2 w-2/3 -translate-x-1/2 cursor-pointer accent-cyan-300"
+            className="absolute bottom-4 left-1/2 w-2/3 -translate-x-1/2 cursor-pointer"
+            style={{ accentColor: '#E7522D' }}
           />
         </div>
       </div>
@@ -173,10 +174,10 @@ const BeforeAfter = () => {
       id="results"
       className="relative overflow-hidden bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 py-16 sm:py-24"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.18),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0" style={{ background: 'radial-gradient(circle at top, rgba(231, 82, 45, 0.18), transparent 55%)' }} />
       <div className="relative mx-auto max-w-6xl px-6">
         <header className="mx-auto max-w-3xl text-center text-white">
-          <p className="text-sm font-semibold uppercase tracking-[0.4em] text-cyan-300">
+          <p className="text-sm font-semibold uppercase tracking-[0.4em]" style={{ color: '#E7522D' }}>
             Proof First
           </p>
           <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
