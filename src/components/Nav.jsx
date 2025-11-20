@@ -73,7 +73,7 @@ const Nav = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg'
+          ? 'bg-white/10 backdrop-blur-lg shadow-lg'
           : 'bg-transparent'
       }`}
     >
@@ -220,7 +220,7 @@ const Nav = () => {
       >
         <div
           className={`px-4 py-6 space-y-2 ${
-            scrolled ? 'bg-white' : 'bg-white/95 backdrop-blur-md'
+            scrolled ? 'bg-white/10 backdrop-blur-lg' : 'bg-white/95 backdrop-blur-md'
           }`}
         >
           {menuItems.map((item, index) => (
