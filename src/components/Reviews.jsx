@@ -70,7 +70,7 @@ const Reviews = () => {
     setCurrent((prev) => (prev - 1 + REVIEWS.length) % REVIEWS.length);
 
   return (
-    <section className="relative z-10 mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+    <section id="reviews" className="relative z-10 mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
       <div className="absolute inset-0 -z-10 mx-auto h-[520px] w-[90%] max-w-5xl rounded-3xl blur-3xl" style={{ background: 'linear-gradient(to right, rgba(231, 82, 45, 0.1), rgba(231, 82, 45, 0.05), white)' }} />
       <div className="flex flex-col gap-10 rounded-3xl border border-white/60 bg-white/80 p-8 shadow-xl backdrop-blur">
         <div className="flex flex-col gap-4 text-center">

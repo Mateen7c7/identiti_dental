@@ -9,8 +9,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
+      
       <div className="absolute inset-0 z-0">
         <img 
           src="/hero.png" 
@@ -26,11 +27,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Logo */}
         <div className="absolute left-0 top-0 sm:top-4 sm:left-4 flex items-center gap-3">
-          <img
-            src="/logo.jpg"
-            alt="Identiti Dental logo"
-            className="h-12 w-12 sm:h-16 sm:w-16 object-contain drop-shadow-lg"
-          />
+         
           <span className="hidden sm:inline text-sm font-semibold tracking-[0.2em] text-white/80 uppercase">
             Identiti Dental
           </span>
