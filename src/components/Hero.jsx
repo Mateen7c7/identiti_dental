@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative h-[85vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       
       <div className="absolute inset-0 z-0">
@@ -101,7 +101,7 @@ const Hero = () => {
             </div>
 
             {/* Emergency Hotline */}
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            {/* <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <div className="flex items-center justify-center gap-3 mb-3">
                 <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -111,14 +111,14 @@ const Hero = () => {
               <a href="tel:+1234567890" className="text-lg font-semibold transition-colors duration-300" style={{ color: '#E7522D' }} onMouseEnter={(e) => e.currentTarget.style.color = '#f56b45'} onMouseLeave={(e) => e.currentTarget.style.color = '#E7522D'}>
                 24/7: (123) 456-7890
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-        <svg className="w-6 h-6 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+        <svg className="w-10 h-10 text-white opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </div>
