@@ -1,6 +1,7 @@
 import About from "./components/About";
 import BeforeAfter from "./components/BeforeAfter";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
@@ -20,6 +21,7 @@ function App() {
         <Reviews />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }
