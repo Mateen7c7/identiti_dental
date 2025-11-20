@@ -80,7 +80,7 @@ const Hero = () => {
             </button>
             
             <a 
-              href="tel:+1234567890" 
+              href="tel:6302669428" 
               className="group px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-slate-900 transform hover:scale-105 transition-all duration-300 ease-out w-full sm:w-auto min-w-[200px]"
             >
               <span className="flex items-center justify-center gap-2">

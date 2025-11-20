@@ -1,15 +1,17 @@
 import React from "react";
 
+
+
 const Contact = () => {
   const contactDetails = [
     {
       label: "Clinic Address",
-      value: "123 Harmony Ave, Suite 204, San Diego, CA 92101",
-      action: "https://maps.google.com/?q=123+Harmony+Ave+San+Diego",
+      value: "11-6-870/B/2, Red Hills, Lakdikapul, Hyderabad, Telangana 500004",
+      action: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.1892269036434!2d78.46086907516526!3d17.402704283487118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97680923e513%3A0x207734ce0bb19c9b!2sIdentiti%20Multi%20Speciality%20Dental%20Centre!5e0!3m2!1sen!2sin!4v1763629357906!5m2!1sen!2sin",
     },
     {
       label: "Phone",
-      value: "(619) 555-0143",
+      value: "6302669428",
       action: "tel:+16195550143",
     },
     {
@@ -218,7 +220,7 @@ const Contact = () => {
             <div className="overflow-hidden rounded-3xl border border-white shadow-[0_15px_60px_rgba(15,23,42,0.12)]">
               <iframe
                 title="Identiti Dental on Google Maps"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.3834260929406!2d-117.1627725!3d32.7157365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d954a71ff6bf97%3A0x397c9b0f5bfeabb0!2sDowntown%20San%20Diego%2C%20San%20Diego%2C%20CA!5e0!3m2!1sen!2sus!4v1732030218000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.1892269036434!2d78.46086907516526!3d17.402704283487118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97680923e513%3A0x207734ce0bb19c9b!2sIdentiti%20Multi%20Speciality%20Dental%20Centre!5e0!3m2!1sen!2sin!4v1763629357906!5m2!1sen!2sin"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="h-[320px] w-full border-0 sm:h-[380px]"
