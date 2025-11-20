@@ -180,7 +180,7 @@ const About = () => {
   ]
 
   const certifications = [
-    'American Dental Association (ADA)',
+    'Indian Dental Association (ADA)',
     'State Board Certified',
     'Advanced Cosmetic Dentistry',
     'Implant Dentistry Specialist',
