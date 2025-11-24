@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
-// import NewHero from "./components/NewHero";
+import NewHero from "./components/NewHero";
 import Reviews from "./components/Reviews";
 import Servicess from "./components/Servicess";
 
@@ -17,8 +17,8 @@ function App() {
     <>
       <Nav />
       <main>
-        <Hero />
-        {/* <NewHero/> */}
+        {/* <Hero /> */}
+        <NewHero/>
         <Experience/>
         {/* <About /> */}
         <Servicess  />

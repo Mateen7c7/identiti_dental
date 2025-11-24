@@ -96,10 +96,10 @@ const Nav = () => {
             </div>
             <span
               className={`hidden sm:inline text-lg font-bold tracking-wide transition-colors duration-300 ${
-                scrolled ? 'text-slate-900' : 'text-white'
+                scrolled ? 'text-slate-900' : 'text-slate-900'
               }`}
             >
-              <span style={{ color: scrolled ? '#000000' : '#fff' }}>
+              <span style={{ color: scrolled ? '#000000' : '#000000' }}>
                 IDENTITI
               </span>
               <span
@@ -120,12 +120,12 @@ const Nav = () => {
                 className={`relative px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 group ${
                   scrolled
                     ? 'text-slate-700 hover:text-slate-900'
-                    : 'text-white/90 hover:text-white'
+                    : 'text-slate-700 hover:text-slate-900'
                 } ${
                   activeSection === item.id
                     ? scrolled
                       ? 'text-slate-900'
-                      : 'text-white'
+                      : 'text-slate-900'
                     : ''
                 }`}
                 style={{
@@ -172,7 +172,7 @@ const Nav = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`lg:hidden flex flex-col items-center justify-center w-10 h-10 gap-1.5 transition-all duration-300 ${
-              scrolled ? 'text-slate-900' : 'text-white'
+              scrolled ? 'text-slate-900' : 'text-slate-900'
             }`}
             aria-label="Toggle menu"
           >
@@ -185,7 +185,7 @@ const Nav = () => {
                   ? '#F05B28'
                   : scrolled
                   ? '#000000'
-                  : '#fff',
+                  : '#000000',
               }}
             ></span>
             <span
@@ -193,7 +193,7 @@ const Nav = () => {
                 isOpen ? 'opacity-0' : ''
               }`}
               style={{
-                backgroundColor: scrolled ? '#000000' : '#fff',
+                backgroundColor: scrolled ? '#000000' : '#000000',
               }}
             ></span>
             <span
@@ -205,7 +205,7 @@ const Nav = () => {
                   ? '#F05B28'
                   : scrolled
                   ? '#000000'
-                  : '#fff',
+                  : '#000000',
               }}
             ></span>
           </button>
