@@ -1,149 +1,172 @@
-import React from 'react'
+import { useEffect, useRef, useState } from "react";
+
+const stats = [
+  {
+    value: "40+",
+    label: "Years of Expertise",
+    detail: "Family-led care blending seasoned wisdom with modern precision.",
+  },
+  {
+    value: "20 yrs",
+    label: "Clinic Legacy",
+    detail: "Established in 2006 and still run by the same family you trust.",
+  },
+  {
+    value: "25 + 10",
+    label: "Global Practice",
+    detail: "25 years in Kuwait & 10 years in Saudi Arabia refined our craft.",
+  },
+  {
+    value: "25k+",
+    label: "Happy Customers",
+    detail: "Smiles restored for 25,000+ patients across generations.",
+  },
+];
+
+const fatherImg = "/father.jpeg";
+const childImg = "/child_image.jpg";
 
 const Experience = () => {
-  const stats = [
-    {
-      value: '40+',
-      label: 'Years of Expertise',
-      detail: 'Trusted multi-generational dental care for every smile.'
-    },
-    {
-      value: '20',
-      label: 'Years Since Opening',
-      detail: 'Clinic founded in 2006 and serving families ever since.'
-    },
-    {
-      value: '25K+',
-      label: 'Smiles Served',
-      detail: 'More than 25,000 patients cared for with compassion and precision.'
-    },
-    {
-      value: '25',
-      label: 'Years in Kuwait',
-      detail: 'Father led advanced restorative care across Kuwait.'
-    },
-    {
-      value: '10',
-      label: 'Years in Saudi Arabia',
-      detail: 'Refined cosmetic dentistry in premium Saudi clinics.'
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
     }
-  ]
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section id="experience" className="relative py-20 px-6 bg-[#FFFFF0] overflow-hidden">
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="w-64 h-64 bg-[#F05B28] rounded-full blur-3xl absolute -top-20 -left-10"></div>
-        <div className="w-72 h-72 bg-[#000000] rounded-full blur-3xl absolute bottom-0 right-0"></div>
-      </div>
-
-      <div className="relative z-10 max-w-6xl mx-auto space-y-12">
-        <div className="text-center space-y-4">
-          <p className="text-sm tracking-[0.3em] uppercase text-[#000000]/60">Our Legacy</p>
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#000000]">
-            Experience Rooted In
-            <span style={{ color: '#F05B28' }}> Generations of Care</span>
-          </h2>
-          <p className="text-lg text-[#000000]/70 max-w-3xl mx-auto">
-            From our clinic’s beginning in 2006 to decades of international practice, we blend
-            refined techniques with heartfelt care to deliver confident smiles. Across India and the
-            Middle East, we have guided more than 25,000 patients to healthier, brighter teeth.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="bg-white shadow-lg rounded-2xl p-6 border border-[#F05B28]/10 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-            >
-              <p className="text-4xl font-bold" style={{ color: '#F05B28' }}>
-                {stat.value}
-              </p>
-              <h3 className="mt-2 text-xl font-semibold text-[#000000]">{stat.label}</h3>
-              <p className="mt-3 text-sm text-[#000000]/70">{stat.detail}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div className="space-y-6">
-            <div className="bg-white rounded-3xl p-8 border border-[#000000]/10 shadow-lg">
-              <p className="text-sm tracking-[0.3em] uppercase text-[#000000]/60 mb-3">
-                Established 2006
-              </p>
-              <h3 className="text-3xl font-semibold text-[#000000]">
-                20-Year-Old Clinic Built on Trust
-              </h3>
-              <p className="mt-4 text-[#000000]/70 leading-relaxed">
-                Identiti Dental opened its doors in 2006 with a simple purpose: deliver precise,
-                compassionate dentistry to every family. Two decades later, we still honor that promise
-                with modern technology, gentle techniques, and truly personal care.
-              </p>
-            </div>
-
-            <div className="bg-[#000000] text-white rounded-3xl p-8 shadow-2xl">
-              <p className="text-sm tracking-[0.3em] uppercase text-white/70 mb-3">
-                International Craftsmanship
-              </p>
-              <h3 className="text-3xl font-semibold">
-                A Father’s Expertise Around the Gulf
-              </h3>
-              <p className="mt-4 text-white/80 leading-relaxed">
-                With 25 years of restorative dentistry in Kuwait and another 10 years elevating smiles
-                in Saudi Arabia, our family’s Middle East experience brings world-class standards back
-                home to Identiti Dental every single day.
-              </p>
-            </div>
+    <section
+      ref={sectionRef}
+      id="experience"
+      className="relative overflow-hidden bg-[#FFFFF0] py-20 text-[#000000] md:py-28"
+    >
+      <div className="absolute inset-x-0 top-0 -z-10 h-64 bg-linear-to-b from-[#F05B28]/10 to-transparent blur-3xl" />
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 md:px-10 lg:flex-row lg:items-center lg:gap-12">
+        <div
+          className={`flex-1 space-y-8 transition-all duration-700 ease-out ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
+        >
+          <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.35em] text-[#F05B28]">
+            <span className="h-px w-10 bg-[#F05B28]" />
+            Trusted Experience
           </div>
-
-          <div className="bg-white rounded-3xl p-8 shadow-xl border border-[#F05B28]/20">
-            <p className="text-sm tracking-[0.3em] uppercase text-[#F05B28]">
-              Our Story at a Glance
+          <div className="space-y-6">
+            <h2 className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
+              40 years of family-rooted dental excellence.
+            </h2>
+            <p className="text-base leading-relaxed text-[#1D1C1C]/80 sm:text-lg">
+              Our clinic opened in 2006 with a simple promise—deliver the warmth
+              of family dentistry with global standards. Inspired by a father who
+              served 25 years in Kuwait and 10 years in Saudi Arabia, we have
+              welcomed generations of patients who now feel like family.
             </p>
-            <div className="mt-6 space-y-6">
-              {[
-                {
-                  year: '2006',
-                  title: 'Clinic Opens',
-                  text: 'Identiti Dental welcomes its first patients as a boutique clinic with big ambitions.'
-                },
-                {
-                  year: '2010s',
-                  title: 'Growing Trust',
-                  text: 'Families across the city rely on our gentle approach for preventive and restorative care.'
-                },
-                {
-                  year: 'Today',
-                  title: '40 Years Strong',
-                  text: 'Combined experience from India, Kuwait, and Saudi Arabia fuels our modern smile design studio.'
-                },
-                {
-                  year: '25K+',
-                  title: 'Patients Served',
-                  text: 'An ever-growing community trusts us for preventive, cosmetic, and restorative care.'
-                }
-              ].map((item) => (
-                <div key={item.year} className="flex gap-4">
-                  <div>
-                    <div
-                      className="w-16 h-16 rounded-2xl flex items-center justify-center text-xl font-semibold"
-                      style={{ backgroundColor: '#F05B28', color: '#FFFFF0' }}
-                    >
-                      {item.year}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-semibold text-[#000000]">{item.title}</h4>
-                    <p className="text-sm text-[#000000]/70 mt-2">{item.text}</p>
-                  </div>
-                </div>
-              ))}
+            <p className="text-base leading-relaxed text-[#1D1C1C]/80 sm:text-lg">
+              More than 25,000 happy customers have trusted us with preventative,
+              restorative, and cosmetic treatments. Every smile represents a
+              story of careful listening, personalised planning, and gentle care.
+            </p>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {stats.map((stat, index) => (
+              <div
+                key={stat.label}
+                style={{ transitionDelay: `${index * 120}ms` }}
+                className={`rounded-2xl border border-[#F05B28]/20 bg-white/70 p-6 shadow-lg shadow-[#F05B28]/10 transition-all duration-500 ease-out ${
+                  isVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-6 opacity-0"
+                }`}
+              >
+                <p className="text-3xl font-bold text-[#F05B28]">{stat.value}</p>
+                <p className="mt-2 text-lg font-semibold text-[#000000]">
+                  {stat.label}
+                </p>
+                <p className="mt-1 text-sm text-[#1D1C1C]/70">{stat.detail}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-4">
+            <a
+              href="#contact"
+              className="rounded-full bg-[#F05B28] px-8 py-3 text-sm font-semibold uppercase tracking-wide text-[#FFFFF0] shadow-lg shadow-[#F05B28]/40 transition hover:-translate-y-1 hover:bg-[#d34d20]"
+            >
+              Book a visit
+            </a>
+            <p className="text-sm uppercase tracking-[0.25em] text-[#1D1C1C]/70">
+              Family-owned since 2006
+            </p>
+          </div>
+        </div>
+
+        <div
+          className={`relative flex flex-1 items-center justify-center transition-all duration-700 ease-out lg:justify-end ${
+            isVisible
+              ? "translate-y-0 opacity-100 delay-150"
+              : "translate-y-10 opacity-0"
+          }`}
+        >
+          <div className="relative w-full max-w-md">
+            <div className="rounded-[2.5rem] border border-[#F05B28]/20 bg-linear-to-b from-white via-[#FFF9EE] to-[#FFE2D0] p-4 shadow-2xl shadow-[#F05B28]/20">
+              <img
+                src={fatherImg}
+                alt="Clinic founder whose global experience shaped our care"
+                className="h-88 w-full rounded-4xl object-cover"
+                loading="lazy"
+              />
+              <div className="absolute bottom-6 left-1/2 hidden w-[85%] -translate-x-1/2 rounded-2xl bg-[#000000]/80 px-6 py-3 text-sm text-white shadow-lg sm:block">
+                Father & Mentor — 25 yrs in Kuwait, 10 yrs in Saudi Arabia
+              </div>
+            </div>
+            <div className="mt-4 rounded-2xl bg-[#000000]/85 px-6 py-4 text-sm text-white shadow-lg sm:hidden">
+              Father & Mentor — 25 yrs in Kuwait, 10 yrs in Saudi Arabia
+            </div>
+            <div className="absolute -bottom-10 -left-6 hidden w-44 rounded-3xl border-2 border-white bg-white/90 p-3 shadow-xl shadow-[#F05B28]/20 sm:block">
+              <img
+                src={childImg}
+                alt="Second-generation dentist continuing the legacy"
+                className="h-40 w-full rounded-2xl object-cover"
+                loading="lazy"
+              />
+              <p className="mt-3 text-xs font-semibold text-[#000000]">
+                Second-generation specialist keeping smiles youthful.
+              </p>
+            </div>
+            <div className="mt-8 rounded-3xl border-2 border-white bg-white/95 p-4 shadow-xl shadow-[#F05B28]/20 sm:hidden">
+              <img
+                src={childImg}
+                alt="Second-generation dentist continuing the legacy"
+                className="h-52 w-full rounded-2xl object-bottom"
+                loading="lazy"
+              />
+              <p className="mt-4 text-base font-semibold leading-snug text-[#000000]">
+                Second-generation specialist keeping smiles youthful.
+              </p>
+            </div>
+            <div className="absolute -top-10 right-0 rounded-2xl bg-[#F05B28] px-5 py-4 text-white shadow-2xl">
+              <p className="text-3xl font-bold">25k+</p>
+              <p className="text-xs uppercase tracking-wide">Happy Customers</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;
