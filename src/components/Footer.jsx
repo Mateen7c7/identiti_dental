@@ -161,7 +161,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="bg-white rounded-xl p-4 border border-slate-300 hover:border-[#F05B28] transition-all duration-300 shadow-md">
                 <p className="text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">
-                  Emergency Line
+                  Contact Number
                 </p>
                 <a
                   href="tel:6302669428"

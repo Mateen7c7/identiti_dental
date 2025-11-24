@@ -39,6 +39,30 @@ const REVIEWS = [
   },
 ];
 
+const VIDEO_REVIEWS = [
+  {
+    id: "PgdAhklrF9Q",
+    patient: "Marianna",
+    focus: "Smile Renewal",
+    summary:
+      "From anxious to confident — see how gentle care and modern tech restored her smile.",
+  },
+  {
+    id: "OMk2UbTcrfs",
+    patient: "Lauren",
+    focus: "Clear Aligners",
+    summary:
+      "She wanted subtle corrections with zero downtime. Hear her Invisalign-style journey.",
+  },
+  {
+    id: "MfcCdbbtFb4",
+    patient: "Dr. Sam",
+    focus: "Family Dentistry",
+    summary:
+      "A physician’s perspective on trusting Identiti Dental with his family’s oral health.",
+  },
+];
+
 const Star = ({ filled }) => (
     <svg
       aria-hidden="true"
@@ -72,7 +96,7 @@ const Reviews = () => {
   return (
     <section id="reviews" className="relative z-10 mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
       <div className="absolute inset-0 -z-10 mx-auto h-[520px] w-[90%] max-w-5xl rounded-3xl blur-3xl" style={{ background: 'linear-gradient(to right, rgba(240, 91, 40, 0.1), rgba(240, 91, 40, 0.05), white)' }} />
-      <div className="flex flex-col gap-10 rounded-3xl border border-white/60 bg-white/80 p-8 shadow-xl backdrop-blur">
+      <div className="flex flex-col gap-10 rounded-3xl border border-white/60 bg-white/80  shadow-xl backdrop-blur">
         <div className="flex flex-col gap-4 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.3em]" style={{ color: '#F05B28' }}>
             Loved by Patients
@@ -168,6 +192,52 @@ const Reviews = () => {
               style={current === index ? { backgroundColor: '#F05B28' } : {}}
             />
           ))}
+        </div>
+
+        <div className="grid gap-10 rounded-3xl border border-orange-100 bg-[#FFFFF0] p-8 shadow-inner">
+          <div className="flex flex-col gap-3 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em]" style={{ color: '#F05B28' }}>
+              Watch Their Stories
+            </p>
+            <h3 className="text-2xl font-bold md:text-3xl" style={{ color: '#000000' }}>
+              Video Testimonials
+            </h3>
+            <p className="text-base text-slate-600 md:text-lg">
+              Real patients sharing authentic journeys. Hear firsthand what comfort, technology,
+              and artistry feel like at Identiti Dental.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {VIDEO_REVIEWS.map((video) => (
+              <article
+                key={video.id}
+                className="group flex flex-col gap-4 rounded-2xl border border-[#F05B28]/20 bg-white/90 p-5 shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <div className="relative overflow-hidden rounded-xl bg-black">
+                  <div className="aspect-video w-full">
+                    <iframe
+                      className="h-full w-full"
+                      src={`https://www.youtube.com/embed/${video.id}`}
+                      title={`${video.patient} testimonial`}
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+                    {video.focus}
+                  </p>
+                  <h4 className="text-xl font-semibold" style={{ color: '#000000' }}>
+                    {video.patient}'s Story
+                  </h4>
+                  <p className="text-sm text-slate-600">{video.summary}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
