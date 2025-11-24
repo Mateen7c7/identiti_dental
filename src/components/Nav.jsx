@@ -91,7 +91,7 @@ const Nav = () => {
                 className="h-12 w-12 sm:h-14 sm:w-14 object-contain transition-transform duration-300 group-hover:scale-110 rounded-full"
               />
               <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"
-                style={{ backgroundColor: '#E7522D' }}
+                style={{ backgroundColor: '#F05B28' }}
               ></div>
             </div>
             <span
@@ -99,12 +99,12 @@ const Nav = () => {
                 scrolled ? 'text-slate-900' : 'text-white'
               }`}
             >
-              <span style={{ color: scrolled ? '#1D1C1C' : '#fff' }}>
+              <span style={{ color: scrolled ? '#000000' : '#fff' }}>
                 IDENTITI
               </span>
               <span
                 className="ml-1"
-                style={{ color: '#E7522D' }}
+                style={{ color: '#F05B28' }}
               >
                 DENTAL
               </span>
@@ -138,14 +138,14 @@ const Nav = () => {
                 {activeSection === item.id && (
                   <span
                     className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300"
-                    style={{ backgroundColor: '#E7522D' }}
+                    style={{ backgroundColor: '#F05B28' }}
                   ></span>
                 )}
 
                 {/* Hover effect */}
                 <span
                   className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-300"
-                  style={{ backgroundColor: '#E7522D' }}
+                  style={{ backgroundColor: '#F05B28' }}
                 ></span>
               </button>
             ))}
@@ -154,13 +154,13 @@ const Nav = () => {
             <button
               onClick={() => scrollToSection('contact')}
               className="ml-4 px-6 py-2.5 text-sm font-semibold text-white rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-              style={{ backgroundColor: '#E7522D' }}
+              style={{ backgroundColor: '#F05B28' }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#d6451f'
+                e.currentTarget.style.backgroundColor = '#d6491f'
                 e.currentTarget.style.transform = 'scale(1.05)'
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#E7522D'
+                e.currentTarget.style.backgroundColor = '#F05B28'
                 e.currentTarget.style.transform = 'scale(1)'
               }}
             >
@@ -182,9 +182,9 @@ const Nav = () => {
               }`}
               style={{
                 backgroundColor: isOpen
-                  ? '#E7522D'
+                  ? '#F05B28'
                   : scrolled
-                  ? '#1D1C1C'
+                  ? '#000000'
                   : '#fff',
               }}
             ></span>
@@ -193,7 +193,7 @@ const Nav = () => {
                 isOpen ? 'opacity-0' : ''
               }`}
               style={{
-                backgroundColor: scrolled ? '#1D1C1C' : '#fff',
+                backgroundColor: scrolled ? '#000000' : '#fff',
               }}
             ></span>
             <span
@@ -202,9 +202,9 @@ const Nav = () => {
               }`}
               style={{
                 backgroundColor: isOpen
-                  ? '#E7522D'
+                  ? '#F05B28'
                   : scrolled
-                  ? '#1D1C1C'
+                  ? '#000000'
                   : '#fff',
               }}
             ></span>
@@ -234,12 +234,12 @@ const Nav = () => {
               }`}
               style={{
                 backgroundColor:
-                  activeSection === item.id ? '#E7522D' : 'transparent',
+                  activeSection === item.id ? '#F05B28' : 'transparent',
                 transitionDelay: `${index * 0.05}s`,
               }}
               onMouseEnter={(e) => {
                 if (activeSection !== item.id) {
-                  e.currentTarget.style.backgroundColor = 'rgba(231, 82, 45, 0.1)'
+                  e.currentTarget.style.backgroundColor = 'rgba(240, 91, 40, 0.1)'
                 }
               }}
               onMouseLeave={(e) => {
@@ -256,12 +256,12 @@ const Nav = () => {
           <button
             onClick={() => scrollToSection('contact')}
             className="w-full mt-4 px-6 py-3 text-sm font-semibold text-white rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
-            style={{ backgroundColor: '#E7522D' }}
+            style={{ backgroundColor: '#F05B28' }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#d6451f'
+              e.currentTarget.style.backgroundColor = '#d6491f'
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#E7522D'
+              e.currentTarget.style.backgroundColor = '#F05B28'
             }}
           >
             Book Appointment

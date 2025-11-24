@@ -70,13 +70,13 @@ const Experience = () => {
             <h2 className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
               40 years of family-rooted dental excellence.
             </h2>
-            <p className="text-base leading-relaxed text-[#1D1C1C]/80 sm:text-lg">
+            <p className="text-base leading-relaxed text-[#000000]/80 sm:text-lg">
               Our clinic opened in 2006 with a simple promise—deliver the warmth
               of family dentistry with global standards. Inspired by a father who
               served 25 years in Kuwait and 10 years in Saudi Arabia, we have
               welcomed generations of patients who now feel like family.
             </p>
-            <p className="text-base leading-relaxed text-[#1D1C1C]/80 sm:text-lg">
+            <p className="text-base leading-relaxed text-[#000000]/80 sm:text-lg">
               More than 25,000 happy customers have trusted us with preventative,
               restorative, and cosmetic treatments. Every smile represents a
               story of careful listening, personalised planning, and gentle care.
@@ -97,7 +97,7 @@ const Experience = () => {
                 <p className="mt-2 text-lg font-semibold text-[#000000]">
                   {stat.label}
                 </p>
-                <p className="mt-1 text-sm text-[#1D1C1C]/70">{stat.detail}</p>
+                <p className="mt-1 text-sm text-[#000000]/70">{stat.detail}</p>
               </div>
             ))}
           </div>
@@ -108,7 +108,7 @@ const Experience = () => {
             >
               Book a visit
             </a>
-            <p className="text-sm uppercase tracking-[0.25em] text-[#1D1C1C]/70">
+            <p className="text-sm uppercase tracking-[0.25em] text-[#000000]/70">
               Family-owned since 2006
             </p>
           </div>
@@ -129,11 +129,11 @@ const Experience = () => {
                 className="h-88 w-full rounded-4xl object-cover"
                 loading="lazy"
               />
-              <div className="absolute bottom-6 left-1/2 hidden w-[85%] -translate-x-1/2 rounded-2xl bg-[#000000]/80 px-6 py-3 text-sm text-white shadow-lg sm:block">
+              <div className="absolute bottom-6 left-1/2 hidden w-[85%] -translate-x-1/2 rounded-2xl bg-white/95 backdrop-blur-sm px-6 py-3 text-sm text-[#000000] shadow-lg border border-slate-200 sm:block">
                 Father & Mentor — 25 yrs in Kuwait, 10 yrs in Saudi Arabia
               </div>
             </div>
-            <div className="mt-4 rounded-2xl bg-[#000000]/85 px-6 py-4 text-sm text-white shadow-lg sm:hidden">
+            <div className="mt-4 rounded-2xl bg-white/95 backdrop-blur-sm px-6 py-4 text-sm text-[#000000] shadow-lg border border-slate-200 sm:hidden">
               Father & Mentor — 25 yrs in Kuwait, 10 yrs in Saudi Arabia
             </div>
             <div className="absolute -bottom-10 -left-6 hidden w-44 rounded-3xl border-2 border-white bg-white/90 p-3 shadow-xl shadow-[#F05B28]/20 sm:block">

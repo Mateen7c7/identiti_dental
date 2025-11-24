@@ -47,22 +47,22 @@ const Gallery = () => {
   return (
     <section
       id="gallery"
-      className="relative overflow-hidden bg-slate-950 py-20 text-white"
+      className="relative overflow-hidden bg-[#FFFFF0] py-20 text-[#000000]"
     >
       <div className="pointer-events-none absolute inset-0 opacity-60">
-        <div className="blur-[140px] duration-1000 animate-pulse absolute -top-32 left-0 h-72 w-72 rounded-full" style={{ backgroundColor: 'rgba(231, 82, 45, 0.4)' }} />
-        <div className="blur-[160px] duration-1000 animate-pulse absolute bottom-0 right-0 h-96 w-96 rounded-full delay-300" style={{ backgroundColor: 'rgba(231, 82, 45, 0.3)' }} />
+        <div className="blur-[140px] duration-1000 animate-pulse absolute -top-32 left-0 h-72 w-72 rounded-full" style={{ backgroundColor: 'rgba(240, 91, 40, 0.4)' }} />
+        <div className="blur-[160px] duration-1000 animate-pulse absolute bottom-0 right-0 h-96 w-96 rounded-full delay-300" style={{ backgroundColor: 'rgba(240, 91, 40, 0.3)' }} />
       </div>
 
       <div className="relative mx-auto flex max-w-6xl flex-col gap-12 px-6">
         <header className="mx-auto max-w-3xl text-center">
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-1 text-xs tracking-[0.3em] uppercase" style={{ color: '#E7522D' }}>
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#F05B28]/30 bg-[#F05B28]/10 px-4 py-1 text-xs tracking-[0.3em] uppercase" style={{ color: '#F05B28' }}>
             Spaces & Comfort
           </p>
-          <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-            Experience Identiti Dental’s calming, tech-forward environment
+          <h2 className="text-3xl font-semibold leading-tight text-[#000000] sm:text-4xl lg:text-5xl">
+            Experience Identiti Dental's calming, tech-forward environment
           </h2>
-          <p className="mt-4 text-base text-slate-200 sm:text-lg">
+          <p className="mt-4 text-base text-slate-700 sm:text-lg">
             Every space is choreographed to reduce anxiety, showcase innovation,
             and highlight the thoughtful touches that make each visit relaxing.
           </p>
@@ -72,9 +72,9 @@ const Gallery = () => {
           {galleryShowcase.map(({ title, description, image, badge, accent }, index) => (
             <article
               key={title}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:border-white/30"
+              className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl transition duration-500 hover:-translate-y-2 hover:border-[#F05B28]/30"
               style={{
-                boxShadow: '0 20px 60px rgba(231, 82, 45, 0.2)',
+                boxShadow: '0 20px 60px rgba(240, 91, 40, 0.2)',
                 animationDelay: `${index * 100}ms`,
               }}
             >
@@ -90,23 +90,23 @@ const Gallery = () => {
                 />
               </div>
               <div className="relative space-y-4 p-6">
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide" style={{ color: '#E7522D' }}>
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#F05B28]/30 bg-[#F05B28]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide" style={{ color: '#F05B28' }}>
                   {badge}
-                  <span className="h-1 w-1 rounded-full" style={{ backgroundColor: '#E7522D' }} />
+                  <span className="h-1 w-1 rounded-full" style={{ backgroundColor: '#F05B28' }} />
                   Comfort Focused
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold text-white">{title}</h3>
-                  <p className="mt-2 text-sm text-slate-200">{description}</p>
+                  <h3 className="text-2xl font-semibold text-[#000000]">{title}</h3>
+                  <p className="mt-2 text-sm text-slate-700">{description}</p>
                 </div>
-                <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-slate-300">
+                <div className="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-slate-600">
                   <span>Fully Sanitized</span>
                   <span>360° Care</span>
                 </div>
               </div>
 
-              <div className="pointer-events-none absolute -right-12 -top-12 h-24 w-24 rounded-full border border-white/20 bg-white/5 opacity-0 transition duration-500 group-hover:translate-x-6 group-hover:opacity-100" />
-              <div className="pointer-events-none absolute -bottom-10 -left-6 h-20 w-20 rounded-full border border-white/10 bg-white/5 opacity-0 transition duration-500 group-hover:-translate-y-3 group-hover:opacity-100" />
+              <div className="pointer-events-none absolute -right-12 -top-12 h-24 w-24 rounded-full border border-slate-200 bg-slate-100 opacity-0 transition duration-500 group-hover:translate-x-6 group-hover:opacity-100" />
+              <div className="pointer-events-none absolute -bottom-10 -left-6 h-20 w-20 rounded-full border border-slate-200 bg-slate-100 opacity-0 transition duration-500 group-hover:-translate-y-3 group-hover:opacity-100" />
             </article>
           ))}
         </div>

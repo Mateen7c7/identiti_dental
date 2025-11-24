@@ -31,7 +31,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-[#FFFFF0] text-[#000000]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8">
@@ -49,22 +49,22 @@ const Footer = () => {
                 />
                 <div
                   className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-300"
-                  style={{ backgroundColor: '#E7522D' }}
+                  style={{ backgroundColor: '#F05B28' }}
                 ></div>
               </div>
               <div>
                 <span className="text-xl font-bold tracking-wide block">
-                  <span className="text-white">IDENTITI</span>
-                  <span className="ml-1" style={{ color: '#E7522D' }}>
+                  <span className="text-[#000000]">IDENTITI</span>
+                  <span className="ml-1" style={{ color: '#F05B28' }}>
                     DENTAL
                   </span>
                 </span>
-                <p className="text-sm text-slate-400 mt-1">
+                <p className="text-sm text-slate-600 mt-1">
                   Your Smile, Our Identity
                 </p>
               </div>
             </div>
-            <p className="text-slate-400 text-sm leading-relaxed">
+            <p className="text-slate-600 text-sm leading-relaxed">
               Transforming smiles with precision, care, and excellence. Your
               trusted partner in dental health and aesthetics.
             </p>
@@ -72,7 +72,7 @@ const Footer = () => {
 
           {/* Quick Links Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-6" style={{ color: '#E7522D' }}>
+            <h3 className="text-lg font-semibold mb-6" style={{ color: '#F05B28' }}>
               Quick Links
             </h3>
             <ul className="space-y-3">
@@ -80,9 +80,9 @@ const Footer = () => {
                 <li key={link.id}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    className="text-slate-300 hover:text-white transition-colors duration-300 text-sm font-medium group flex items-center gap-2"
+                    className="text-slate-700 hover:text-[#000000] transition-colors duration-300 text-sm font-medium group flex items-center gap-2"
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.color = '#E7522D'
+                      e.currentTarget.style.color = '#F05B28'
                       e.currentTarget.style.transform = 'translateX(4px)'
                     }}
                     onMouseLeave={(e) => {
@@ -93,7 +93,7 @@ const Footer = () => {
                   >
                     <span
                       className="w-0 h-0.5 transition-all duration-300 group-hover:w-2"
-                      style={{ backgroundColor: '#E7522D' }}
+                      style={{ backgroundColor: '#F05B28' }}
                     ></span>
                     {link.name}
                   </button>
@@ -104,16 +104,16 @@ const Footer = () => {
 
           {/* Legal & Policies Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-6" style={{ color: '#E7522D' }}>
+            <h3 className="text-lg font-semibold mb-6" style={{ color: '#F05B28' }}>
               Legal
             </h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href="#privacy-policy"
-                  className="text-slate-300 hover:text-white transition-colors duration-300 text-sm font-medium group flex items-center gap-2"
+                  className="text-slate-700 hover:text-[#000000] transition-colors duration-300 text-sm font-medium group flex items-center gap-2"
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = '#E7522D'
+                    e.currentTarget.style.color = '#F05B28'
                     e.currentTarget.style.transform = 'translateX(4px)'
                   }}
                   onMouseLeave={(e) => {
@@ -124,7 +124,7 @@ const Footer = () => {
                 >
                   <span
                     className="w-0 h-0.5 transition-all duration-300 group-hover:w-2"
-                    style={{ backgroundColor: '#E7522D' }}
+                    style={{ backgroundColor: '#F05B28' }}
                   ></span>
                   Privacy Policy
                 </a>
@@ -132,9 +132,9 @@ const Footer = () => {
               <li>
                 <a
                   href="#terms-conditions"
-                  className="text-slate-300 hover:text-white transition-colors duration-300 text-sm font-medium group flex items-center gap-2"
+                  className="text-slate-700 hover:text-[#000000] transition-colors duration-300 text-sm font-medium group flex items-center gap-2"
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = '#E7522D'
+                    e.currentTarget.style.color = '#F05B28'
                     e.currentTarget.style.transform = 'translateX(4px)'
                   }}
                   onMouseLeave={(e) => {
@@ -145,7 +145,7 @@ const Footer = () => {
                 >
                   <span
                     className="w-0 h-0.5 transition-all duration-300 group-hover:w-2"
-                    style={{ backgroundColor: '#E7522D' }}
+                    style={{ backgroundColor: '#F05B28' }}
                   ></span>
                   Terms & Conditions
                 </a>
@@ -155,24 +155,24 @@ const Footer = () => {
 
           {/* Emergency Contact Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-6" style={{ color: '#E7522D' }}>
+            <h3 className="text-lg font-semibold mb-6" style={{ color: '#F05B28' }}>
               Emergency Contact
             </h3>
             <div className="space-y-4">
-              <div className="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50 hover:border-red-500/50 transition-all duration-300">
-                <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
+              <div className="bg-white rounded-xl p-4 border border-slate-300 hover:border-[#F05B28] transition-all duration-300 shadow-md">
+                <p className="text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">
                   Emergency Line
                 </p>
                 <a
                   href="tel:6302669428"
-                  className="text-lg font-semibold text-white hover:text-red-400 transition-colors duration-300 flex items-center gap-2"
-                  style={{ color: '#E7522D' }}
+                  className="text-lg font-semibold text-[#000000] hover:text-[#F05B28] transition-colors duration-300 flex items-center gap-2"
+                  style={{ color: '#F05B28' }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.color = '#ff6b4a'
                     e.currentTarget.style.transform = 'scale(1.05)'
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = '#E7522D'
+                    e.currentTarget.style.color = '#F05B28'
                     e.currentTarget.style.transform = 'scale(1)'
                   }}
                 >
@@ -191,18 +191,18 @@ const Footer = () => {
                   </svg>
                   6302669428
                 </a>
-                <p className="text-xs text-slate-400 mt-2">
+                <p className="text-xs text-slate-600 mt-2">
                   Available 24/7 for dental emergencies
                 </p>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                <p className="text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">
                   Email
                 </p>
                 <a
                   href="mailto:care@identiti.dental"
-                  className="text-sm text-slate-300 hover:text-white transition-colors duration-300"
-                  onMouseEnter={(e) => (e.currentTarget.style.color = '#E7522D')}
+                  className="text-sm text-slate-700 hover:text-[#000000] transition-colors duration-300"
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#F05B28')}
                   onMouseLeave={(e) => (e.currentTarget.style.color = '')}
                 >
                   care@identiti.dental
@@ -215,19 +215,19 @@ const Footer = () => {
         {/* Divider */}
         <div
           className="h-px w-full mb-8"
-          style={{ backgroundColor: 'rgba(231, 82, 45, 0.2)' }}
+          style={{ backgroundColor: 'rgba(240, 91, 40, 0.2)' }}
         ></div>
 
         {/* Copyright & Bottom Bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-slate-400">
+          <div className="text-sm text-slate-600">
             <p>
               © {currentYear} Identiti Dental. All rights reserved.
             </p>
           </div>
-          <div className="flex items-center gap-6 text-sm text-slate-400">
+          <div className="flex items-center gap-6 text-sm text-slate-600">
             <span className="hidden sm:inline">Licensed Dental Practice</span>
-            <span className="text-slate-600">•</span>
+            <span className="text-slate-400">•</span>
             <span>Hyderabad Telengana</span>
           </div>
         </div>

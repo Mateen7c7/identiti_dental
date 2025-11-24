@@ -86,38 +86,38 @@ const TransformationCard = ({ data, index }) => {
   return (
     <article
       ref={ref}
-      className={`grid gap-8 rounded-3xl border border-white/10 bg-white/5 p-6 text-white shadow-2xl backdrop-blur lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:p-10 ${
+      className={`grid gap-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-xl backdrop-blur lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:p-10 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       } transition-all duration-700`}
-      style={{ transitionDelay: `${index * 80}ms`, boxShadow: '0 20px 60px rgba(231, 82, 45, 0.1)' }}
+      style={{ transitionDelay: `${index * 80}ms`, boxShadow: '0 20px 60px rgba(240, 91, 40, 0.1)' }}
     >
       <div className="space-y-6">
-        <span className="inline-flex items-center rounded-full border px-4 py-1 text-sm font-semibold tracking-wide" style={{ borderColor: 'rgba(231, 82, 45, 0.3)', backgroundColor: 'rgba(231, 82, 45, 0.1)', color: '#E7522D' }}>
+        <span className="inline-flex items-center rounded-full border px-4 py-1 text-sm font-semibold tracking-wide" style={{ borderColor: 'rgba(240, 91, 40, 0.3)', backgroundColor: 'rgba(240, 91, 40, 0.1)', color: '#F05B28' }}>
           {data.badge}
         </span>
         <div>
-          <h3 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+          <h3 className="text-2xl font-semibold tracking-tight text-[#000000] md:text-3xl">
             {data.title}
           </h3>
-          <p className="mt-3 text-base text-slate-200 md:text-lg">
+          <p className="mt-3 text-base text-slate-700 md:text-lg">
             {data.description}
           </p>
         </div>
-        <div className="grid gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 shadow-inner shadow-black/20 sm:grid-cols-3">
+        <div className="grid gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-inner sm:grid-cols-3">
           {data.highlights.map((item) => (
             <div key={item.label}>
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
+              <p className="text-xs uppercase tracking-[0.2em] text-slate-600">
                 {item.label}
               </p>
-              <p className="text-lg font-semibold text-white">{item.value}</p>
+              <p className="text-lg font-semibold text-[#000000]">{item.value}</p>
             </div>
           ))}
         </div>
-        <p className="text-sm italic text-slate-200"> {data.testimonial}</p>
+        <p className="text-sm italic text-slate-700"> {data.testimonial}</p>
       </div>
 
       <div className="relative">
-        <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900 shadow-2xl">
+        <div className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
           <img
             src={data.before}
             alt={`Before treatment for ${data.title}`}
@@ -146,10 +146,10 @@ const TransformationCard = ({ data, index }) => {
               </span>
             </div>
           </div>
-          <div className="pointer-events-none absolute left-4 top-4 rounded-full bg-black/60 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+          <div className="pointer-events-none absolute left-4 top-4 rounded-full bg-white/90 backdrop-blur-sm border border-slate-300 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#000000] shadow-md">
             Before
           </div>
-          <div className="pointer-events-none absolute right-4 top-4 rounded-full bg-black/60 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+          <div className="pointer-events-none absolute right-4 top-4 rounded-full bg-white/90 backdrop-blur-sm border border-slate-300 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#000000] shadow-md">
             After
           </div>
           <input
@@ -160,7 +160,7 @@ const TransformationCard = ({ data, index }) => {
             onChange={(event) => setPosition(Number(event.target.value))}
             aria-label={`Drag to compare before and after for ${data.title}`}
             className="absolute bottom-4 left-1/2 w-2/3 -translate-x-1/2 cursor-pointer"
-            style={{ accentColor: '#E7522D' }}
+            style={{ accentColor: '#F05B28' }}
           />
         </div>
       </div>
@@ -172,18 +172,18 @@ const BeforeAfter = () => {
   return (
     <section
       id="results"
-      className="relative overflow-hidden bg-linear-to-b from-slate-950 via-slate-900 to-slate-950 py-16 sm:py-24"
+      className="relative overflow-hidden bg-[#FFFFF0] py-16 sm:py-24"
     >
-      <div className="pointer-events-none absolute inset-0" style={{ background: 'radial-gradient(circle at top, rgba(231, 82, 45, 0.18), transparent 55%)' }} />
+      <div className="pointer-events-none absolute inset-0" style={{ background: 'radial-gradient(circle at top, rgba(240, 91, 40, 0.18), transparent 55%)' }} />
       <div className="relative mx-auto max-w-6xl px-6">
-        <header className="mx-auto max-w-3xl text-center text-white">
-          <p className="text-sm font-semibold uppercase tracking-[0.4em]" style={{ color: '#E7522D' }}>
+        <header className="mx-auto max-w-3xl text-center text-[#000000]">
+          <p className="text-sm font-semibold uppercase tracking-[0.4em]" style={{ color: '#F05B28' }}>
             Proof First
           </p>
-          <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-semibold text-[#000000] sm:text-4xl">
             Before & After Gallery
           </h2>
-          <p className="mt-4 text-base text-slate-200 sm:text-lg">
+          <p className="mt-4 text-base text-slate-700 sm:text-lg">
             Real patients. Real transformations. Slide across each case to see
             how tailored treatment plans restored confidence and function—often
             in a matter of days.

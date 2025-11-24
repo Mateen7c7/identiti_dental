@@ -150,23 +150,23 @@ const Servicess = () => {
   return (
     <section
       id="services"
-      className="relative isolate overflow-hidden bg-slate-950 py-16 sm:py-20 lg:py-24"
+      className="relative isolate overflow-hidden bg-[#FFFFF0] py-16 sm:py-20 lg:py-24"
     >
       <div className="absolute inset-0 opacity-60">
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(231, 82, 45, 0.15), transparent 60%)' }} />
-        <div className="absolute -top-20 right-10 h-72 w-72 animate-pulse rounded-full blur-3xl" style={{ backgroundColor: 'rgba(231, 82, 45, 0.2)' }} />
-        <div className="absolute bottom-0 left-10 h-80 w-80 animate-pulse rounded-full blur-3xl" style={{ backgroundColor: 'rgba(231, 82, 45, 0.2)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(240, 91, 40, 0.15), transparent 60%)' }} />
+        <div className="absolute -top-20 right-10 h-72 w-72 animate-pulse rounded-full blur-3xl" style={{ backgroundColor: 'rgba(240, 91, 40, 0.2)' }} />
+        <div className="absolute bottom-0 left-10 h-80 w-80 animate-pulse rounded-full blur-3xl" style={{ backgroundColor: 'rgba(240, 91, 40, 0.2)' }} />
       </div>
 
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: 'rgba(231, 82, 45, 0.9)' }}>
+          <p className="inline-flex items-center gap-2 rounded-full border border-[#F05B28]/30 bg-[#F05B28]/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: '#F05B28' }}>
             Our Services
           </p>
-          <h2 className="mt-6 text-3xl font-semibold text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-6 text-3xl font-semibold text-[#000000] sm:text-4xl lg:text-5xl">
             Everything your smile needs, in one calming destination
           </h2>
-          <p className="mt-4 text-base text-slate-300 sm:text-lg">
+          <p className="mt-4 text-base text-slate-700 sm:text-lg">
             From preventative visits to transformative cosmetic treatments, our
             curated services are designed to keep every member of the family
             confident and comfortable.
@@ -181,11 +181,11 @@ const Servicess = () => {
               ref={element => {
                 cardRefs.current[index] = element
               }}
-              className={`scroll-scale-in group relative rounded-3xl border border-white/10 bg-linear-to-br ${service.accent} p-6 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur transition duration-500 ease-out ${
+              className={`scroll-scale-in group relative rounded-3xl border border-slate-200 bg-white p-6 shadow-lg backdrop-blur transition duration-500 ease-out ${
                 visibleCards.includes(index) ? 'visible' : ''
               }`}
             >
-              <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-900/60 shadow-[0_20px_40px_rgba(8,47,73,0.65)] transition duration-500 group-hover:scale-110" style={{ color: '#E7522D' }}>
+              <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F05B28]/10 shadow-md transition duration-500 group-hover:scale-110" style={{ color: '#F05B28' }}>
                 <svg
                   className="h-7 w-7"
                   viewBox="0 0 16 16"
@@ -194,17 +194,17 @@ const Servicess = () => {
                 >
                   {service.icon}
                 </svg>
-                <div className="absolute inset-0 -z-10 rounded-2xl border border-white/5" />
+                <div className="absolute inset-0 -z-10 rounded-2xl border border-slate-200" />
               </div>
 
-              <h3 className="mt-6 text-xl font-semibold text-white">
+              <h3 className="mt-6 text-xl font-semibold text-[#000000]">
                 {service.title}
               </h3>
-              <p className="mt-3 text-base leading-relaxed text-slate-300">
+              <p className="mt-3 text-base leading-relaxed text-slate-700">
                 {service.description}
               </p>
 
-              <div className="mt-6 flex items-center gap-2 text-sm font-semibold" style={{ color: '#E7522D' }}>
+              <div className="mt-6 flex items-center gap-2 text-sm font-semibold" style={{ color: '#F05B28' }}>
                 <span>Learn more</span>
                 <svg
                   className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -222,8 +222,8 @@ const Servicess = () => {
                 </svg>
               </div>
 
-              <div className="pointer-events-none absolute inset-0 rounded-3xl border border-white/5" />
-              <div className="pointer-events-none absolute inset-x-4 bottom-4 top-4 rounded-[26px] bg-linear-to-b from-white/5 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+              <div className="pointer-events-none absolute inset-0 rounded-3xl border border-slate-200" />
+              <div className="pointer-events-none absolute inset-x-4 bottom-4 top-4 rounded-[26px] bg-[#F05B28]/5 opacity-0 transition duration-500 group-hover:opacity-100" />
             </article>
           ))}
         </div>
