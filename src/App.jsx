@@ -10,6 +10,8 @@ import Nav from "./components/Nav";
 import Reviews from "./components/Reviews";
 import Servicess from "./components/Servicess";
 
+import FloatingContactIcons from "./components/FloatingContactIcons";
+
 function App() {
   return (
     <>
@@ -26,6 +28,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <FloatingContactIcons />
     </>
   );
 }
