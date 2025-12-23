@@ -1,74 +1,44 @@
-
 import React from 'react';
-import './NewHero.css';
+import VideoCarousel from './VideoCarousel';
 
 const NewHero = () => {
-  const images = [
-    '/hero-slider/img1.jpg',
-    '/hero-slider/img2.jpg',
-    '/hero-slider/img3.jpg',
-    '/hero-slider/img4.jpg',
-    '/hero-slider/img5.jpg',
-    '/hero-slider/img6.jpg',
-    '/hero-slider/img7.jpg',
-  ];
-
   return (
-    <div className="hero-container">
-      <div className="hero-content">
-
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-2 text-white  animate-fade-in-up">
-            <span className="block " style={{ color: '#F05B28' }}>IDENTITI</span>
-            <span className="block" style={{ color: '#F05B28' }}>DENTAL</span>
-          </h1>
-
-          {/* Tagline - Animated with delay */}
-          <p className="text-xl sm:text-2xl md:text-3xl font-light mb-2 animate-fade-in-up-delay-1" style={{ color: 'rgba(240, 91, 40, 0.9)' }}>
-            Your Smile, Our Care
-          </p>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#FFFFF0] px-5  overflow-hidden font-sans text-center">
+      <div className="flex flex-col w-full  max-w-md z-10 gap-6">
         
-        {/* <h1 className="hero-title">
-          Experience the <br />
-          <span>Future of Dentistry</span>
-        </h1> */}
-        <p className="hero-subtitle">
-          Experience exceptional dental care in a modern, comfortable environment. 
-            We're committed to making your smile our top priority.
-        </p>
-        <button className="book-btn">Book Appointment</button>
-      </div>
+        {/* Main Title */}
+        <h1 className="text-5xl font-bold animate-fade-in-up">
+          <span className="block text-[#F05B28]">IDENTITI</span>
+          <span className="block text-[#F05B28]">DENTAL</span>
+        </h1>
 
-      <div className="hero-visual">
-        <div className="circle-bg"></div>
-        <div className="orbit-container">
-          {images.map((src, index) => {
-            const angle = (360 / images.length) * index;
-            return (
-              <div 
-                key={index} 
-                className="orbit-item"
-                style={{
-                  transform: `rotate(${angle}deg) translate(180px)`
-                }}
-              >
-                <img 
-                  src={src} 
-                  alt={`Dental Patient ${index + 1}`} 
-                  style={{
-                    animation: `counterRotate-${index} 20s linear infinite`
-                  }}
-                />
-                <style>
-                  {`
-                    @keyframes counterRotate-${index} {
-                      from { transform: rotate(-${angle}deg); }
-                      to { transform: rotate(-${angle + 360}deg); }
-                    }
-                  `}
-                </style>
-              </div>
-            );
-          })}
+        {/* Tagline */}
+        <div className="flex items-center justify-center gap-4 animate-fade-in-up-delay-1">
+          <span className="h-px w-12 bg-linear-to-r from-transparent to-[#F05B28]"></span>
+          <p className="text-lg tracking-[0.3em] uppercase font-light text-black/80 relative">
+            <span className="bg-linear-to-r from-[#F05B28] via-[#F05B28]/70 to-[#F05B28] bg-clip-text text-transparent font-medium">
+              Your Smile
+            </span>
+            <span className="mx-2 text-[#F05B28]/40">•</span>
+            <span className="text-black/70 font-light">Our Care</span>
+          </p>
+          <span className="h-px w-12 bg-linear-to-l from-transparent to-[#F05B28]"></span>
+        </div>
+        
+        {/* Subtitle */}
+        <p className="text-md text-gray-600 leading-relaxed px-2 animate-fade-in-up-delay-2">
+          Experience exceptional dental care in a modern, comfortable environment. 
+          We're committed to making your smile our top priority.
+        </p>
+
+        {/* CTA Button */}
+        <button className="bg-[#F05B28] text-white px-8 py-3 text-base font-semibold rounded-full transition-all duration-300 shadow-[0_10px_20px_rgba(240,91,40,0.3)] active:scale-95 animate-fade-in-up-delay-3 mx-auto mt-2">
+          Book Appointment
+        </button>
+
+        {/* Placeholder Section */}
+        <div className="">
+          <VideoCarousel />
         </div>
       </div>
     </div>
