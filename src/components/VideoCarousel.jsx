@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const videos = [
-  "/vid3.MP4",
+  "/vid3.mp4",
   "/vid2.MP4",
-  "/vid1.mp4",
+  "/vid1.MP4",
 ];
 
 export default function VideoCarousel() {
